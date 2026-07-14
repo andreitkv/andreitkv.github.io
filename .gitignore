@@ -1,0 +1,9 @@
+.DS_Store
+.codex_backups/
+/AGENTS.md
+/tools/
+.env
+.env.*
+*.log
+**/*cookies*.txt
+media/**/drafts/

@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portfolio of 3D character animator Andrei Tverdiukov — animation, custom Maya tools and practical macOS automation.">
+  <title>Andrei Tverdiukov — 3D Character Animator</title>
+  <link rel="stylesheet" href="assets/styles.css">
+  <script src="assets/site.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Andrei Tverdiukov — Home">
+      <span class="brand-mark">AT</span>
+      <span>Andrei Tverdiukov</span>
+    </a>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="home-hero page-shell">
+      <div class="hero-copy reveal">
+        <p class="eyebrow">3D Character Animator · Animation Tools</p>
+        <h1>Animation first.<br><span>Tools</span> when they matter.</h1>
+        <p class="hero-intro">I work with character animation, custom Maya tools and practical macOS automations built around real production problems.</p>
+        <a class="text-link" href="#work">Browse the project index <span aria-hidden="true">↘</span></a>
+      </div>
+
+      <div class="curve-stage reveal" aria-hidden="true">
+        <svg viewBox="0 0 760 480" role="img">
+          <path class="curve-grid" d="M0 80H760M0 160H760M0 240H760M0 320H760M0 400H760M95 0V480M190 0V480M285 0V480M380 0V480M475 0V480M570 0V480M665 0V480"/>
+          <path class="curve-line" d="M42 366 C116 366 103 138 218 138 S315 364 408 364 S520 104 620 104 S664 268 724 268"/>
+          <g class="curve-keys">
+            <rect x="37" y="361" width="10" height="10"/>
+            <rect x="213" y="133" width="10" height="10"/>
+            <rect x="403" y="359" width="10" height="10"/>
+            <rect x="615" y="99" width="10" height="10"/>
+            <rect x="719" y="263" width="10" height="10"/>
+          </g>
+        </svg>
+        <span class="curve-label">translateY</span>
+      </div>
+    </section>
+
+    <section class="work-section page-shell" id="work">
+      <div class="section-heading reveal">
+        <div>
+          <p class="eyebrow">Project index</p>
+          <p class="project-count"><span>04</span> documented projects</p>
+        </div>
+        <h2>Everything in one place.<br>Open any card for the full story.</h2>
+      </div>
+
+      <div class="catalog-key reveal" aria-label="Project categories">
+        <span class="is-active">All work</span>
+        <span>Animation</span>
+        <span>Maya tools</span>
+        <span>Automation</span>
+      </div>
+
+      <div class="project-grid">
+        <a class="catalog-card reveal" href="projects/tkv-curve-tools.html" data-preview-card>
+          <div class="catalog-cover curve-tools-cover">
+            <div class="cover-grid" aria-hidden="true"></div>
+            <span class="cover-category">Maya Graph Editor · animBot-inspired workflow</span>
+            <div class="cover-promise">
+              <strong>Curve<br>Tools</strong>
+              <span>Shape and edit animation curves faster</span>
+            </div>
+            <ul class="cover-feature-list cover-feature-list-wide" aria-label="Included curve tools">
+              <li>Pull / Push</li><li>Smooth / Rough</li><li>Ease In / Out</li>
+              <li>Blend to Ease</li><li>Infinity</li><li>Reverse Keys</li>
+            </ul>
+            <span class="preview-hint">Hover to preview</span>
+
+            <video class="catalog-preview" muted loop playsinline preload="metadata" poster="media/tkv-curve-tools/web/blend-to-tangent.jpg">
+              <source src="media/tkv-curve-tools/web/blend-to-tangent.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <div class="catalog-card-copy">
+            <div class="catalog-meta">
+              <span>01</span>
+              <span>Maya tool</span>
+              <span>2026</span>
+            </div>
+            <h3>TKV Curve Tools</h3>
+            <p>Curve shaping, blending, tangents, infinity modes and animation utilities inside Maya Graph Editor.</p>
+            <div class="catalog-tags">
+              <span>Python</span>
+              <span>Maya 2025</span>
+              <span>macOS</span>
+            </div>
+            <div class="catalog-open">
+              <span>View case study</span>
+              <span aria-hidden="true">↗</span>
+            </div>
+          </div>
+        </a>
+
+        <a class="catalog-card reveal" href="projects/media-intake-automation.html" data-preview-card>
+          <div class="catalog-cover media-intake-cover">
+            <div class="cover-grid" aria-hidden="true"></div>
+            <span class="cover-category">macOS Quick Action</span>
+            <div class="cover-promise">
+              <strong>Download<br>Video</strong>
+              <span>YouTube, Vimeo and other supported sites</span>
+            </div>
+            <ul class="cover-feature-list" aria-label="Video downloader workflow">
+              <li>Copy link</li><li>Run Service</li><li>Get an editor-ready MP4</li>
+            </ul>
+            <span class="preview-hint">Hover to preview</span>
+
+            <video class="catalog-preview" muted loop playsinline preload="metadata" poster="media/media-intake/web/media-intake-poster.jpg">
+              <source src="media/media-intake/web/media-intake-overview.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <div class="catalog-card-copy">
+            <div class="catalog-meta">
+              <span>02</span>
+              <span>Automation</span>
+              <span>2026</span>
+            </div>
+            <h3>TKV Video Downloader</h3>
+            <p>Downloads authorised reference video from a browser link and prepares a consistent editor-ready MP4.</p>
+            <div class="catalog-tags">
+              <span>zsh</span>
+              <span>yt-dlp</span>
+              <span>FFmpeg</span>
+            </div>
+            <div class="catalog-open">
+              <span>View case study</span>
+              <span aria-hidden="true">↗</span>
+            </div>
+          </div>
+        </a>
+
+        <a class="catalog-card reveal" href="projects/russian-dubbing-pipeline.html" data-preview-card>
+          <div class="catalog-cover dubbing-cover">
+            <div class="cover-grid" aria-hidden="true"></div>
+            <span class="cover-category">AI-assisted workflow</span>
+            <div class="cover-promise">
+              <strong>Dub Into<br>Russian</strong>
+              <span>Original speech becomes a timed Russian voice track</span>
+            </div>
+            <ul class="cover-feature-list cover-feature-list-wide" aria-label="Russian dubbing stages">
+              <li>Transcribe</li><li>Translate</li><li>Adapt timing</li>
+              <li>Generate voice</li><li>Mix final MP4</li>
+            </ul>
+            <span class="preview-hint">Hover to preview</span>
+
+            <video class="catalog-preview" muted loop playsinline preload="metadata" poster="media/russian-dubbing/web/russian-dubbing-poster.jpg">
+              <source src="media/russian-dubbing/web/russian-dubbing-overview.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <div class="catalog-card-copy">
+            <div class="catalog-meta">
+              <span>03</span>
+              <span>Automation</span>
+              <span>2026</span>
+            </div>
+            <h3>TKV Russian Dubbing</h3>
+            <p>Transcribes foreign speech, adapts the translation to timing and builds a Russian-dubbed version of the video.</p>
+            <div class="catalog-tags">
+              <span>Python</span>
+              <span>Whisper</span>
+              <span>OpenAI</span>
+            </div>
+            <div class="catalog-open">
+              <span>View case study</span>
+              <span aria-hidden="true">↗</span>
+            </div>
+          </div>
+        </a>
+
+        <a class="catalog-card reveal" href="projects/finder-media-utilities.html" data-preview-card>
+          <div class="catalog-cover media-utilities-cover">
+            <div class="cover-grid" aria-hidden="true"></div>
+            <span class="cover-category">Finder Quick Actions</span>
+            <div class="cover-promise">
+              <strong>Video<br>Utilities</strong>
+              <span>Select files, right click, get the output</span>
+            </div>
+            <ul class="cover-feature-list cover-feature-list-wide" aria-label="Included media utilities">
+              <li>Convert MP4</li><li>Convert GIF</li><li>PNG sequence</li>
+              <li>Slow ×2 / ×3</li><li>Resize images</li><li>Random poses</li>
+            </ul>
+            <span class="preview-hint">Hover to preview</span>
+            <video class="catalog-preview" muted loop playsinline preload="metadata" poster="media/finder-media-utilities/web/finder-media-utilities-poster.jpg" aria-hidden="true">
+              <source src="media/finder-media-utilities/web/finder-media-utilities-overview.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <div class="catalog-card-copy">
+            <div class="catalog-meta">
+              <span>04</span>
+              <span>Automation</span>
+              <span>2026</span>
+            </div>
+            <h3>TKV Media Utilities</h3>
+            <p>One-click Finder tools for MP4, GIF, image sequences, slow motion, resizing and reference preparation.</p>
+            <div class="catalog-tags">
+              <span>Automator</span>
+              <span>FFmpeg</span>
+              <span>ImageMagick</span>
+            </div>
+            <div class="catalog-open">
+              <span>View collection</span>
+              <span aria-hidden="true">↗</span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section class="about-section page-shell" id="about">
+      <div class="about-number reveal">A.</div>
+      <div class="about-copy reveal">
+        <p class="eyebrow">About</p>
+        <h2>I am a character animator who builds tools when repetitive work starts taking attention away from the creative task.</h2>
+        <p>My main focus is expressive character motion and practical production workflows. Scripts are not the end product — they are a way to make animation, media preparation and everyday work faster, more predictable and focused.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer page-shell">
+    <span>Andrei Tverdiukov</span>
+    <span>Portfolio draft · Not published</span>
+  </footer>
+</body>
+</html>

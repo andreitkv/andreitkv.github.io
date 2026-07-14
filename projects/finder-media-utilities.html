@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="TKV Media Utilities — a collection of personal macOS Quick Actions by Andrei Tverdiukov.">
+  <title>TKV Media Utilities — Andrei Tverdiukov</title>
+  <link rel="stylesheet" href="../assets/styles.css">
+  <script src="../assets/site.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="../index.html" aria-label="Andrei Tverdiukov — Home"><span class="brand-mark">AT</span><span>Andrei Tverdiukov</span></a>
+    <nav class="site-nav" aria-label="Project navigation"><a href="#overview">Overview</a><a href="#utilities">Utilities</a><a href="../index.html">All work</a></nav>
+  </header>
+
+  <main>
+    <section class="case-hero page-shell" id="overview">
+      <div class="case-kicker reveal"><span>Collection · 04</span><span>Finder Quick Actions</span></div>
+      <h1 class="reveal case-title-medium">TKV Media<br><span>Utilities</span></h1>
+      <div class="case-summary reveal">
+        <p>A compact set of right-click tools for recurring video and image preparation tasks.</p>
+        <dl class="case-meta">
+          <div><dt>Role</dt><dd>Workflow design &amp; development</dd></div>
+          <div><dt>Built with</dt><dd>zsh · Automator · FFmpeg · ImageMagick</dd></div>
+          <div><dt>Environment</dt><dd>macOS · Finder</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="case-visual-wrap page-shell reveal" aria-label="TKV Media Utilities demonstration">
+      <video class="case-video" controls playsinline preload="metadata" poster="../media/finder-media-utilities/web/finder-media-utilities-poster.jpg">
+        <source src="../media/finder-media-utilities/web/finder-media-utilities-overview.mp4" type="video/mp4">
+      </video>
+      <div class="video-caption"><span>Four utilities · One Finder workflow</span><span>00:53</span></div>
+    </section>
+
+    <section class="case-visual-wrap page-shell reveal" aria-label="Finder media utility collection">
+      <div class="case-visual utilities-case-visual">
+        <div class="visual-topline"><span>RIGHT CLICK / QUICK ACTIONS</span><span>06 UTILITIES</span></div>
+        <div class="utility-dashboard">
+          <article><span>GIF</span><b>Video → GIF</b><small>Palette workflow</small></article>
+          <article><span>SEQ</span><b>Image sequence</b><small>PNG frames</small></article>
+          <article><span>MP4</span><b>1080p video</b><small>Editing format</small></article>
+          <article><span>½×</span><b>Slow motion</b><small>2× / 3× duration</small></article>
+          <article><span>32</span><b>Image resize</b><small>Batch conversion</small></article>
+          <article><span>151</span><b>Random poses</b><small>Maya-ready sequence</small></article>
+        </div>
+      </div>
+      <div class="video-caption"><span>Utility collection</span><span>Select → Right click → Done</span></div>
+    </section>
+
+    <section class="story-section page-shell">
+      <div class="story-heading reveal"><p class="eyebrow">The problem</p><h2>Small repetitive jobs were interrupting larger creative work.</h2></div>
+      <div class="story-copy reveal">
+        <p>Converting one clip was easy. Repeating the same settings, output names and folder steps across many files was where time and attention disappeared.</p>
+        <p>I turned the stable versions of those commands into Finder actions. Files can be selected where they already live, processed with predictable settings and returned next to the originals.</p>
+      </div>
+    </section>
+
+    <section class="quote-band"><div class="page-shell reveal"><p>Select files.<br>Right click.<br><span>Keep working.</span></p></div></section>
+
+    <section class="utilities-section page-shell" id="utilities">
+      <div class="section-heading reveal"><p class="eyebrow">The collection</p><h2>Each utility solves one narrow production task.</h2></div>
+      <div class="utility-detail-grid">
+        <article class="reveal"><span>01 / GIF</span><h3>High-quality GIF</h3><p>Creates a compact preview with a generated colour palette and controlled dithering instead of relying on a basic one-pass conversion.</p></article>
+        <article class="reveal"><span>02 / SEQUENCE</span><h3>Video to frames</h3><p>Extracts every frame into a clearly named PNG sequence, ready for review, compositing or image-based workflows.</p></article>
+        <article class="reveal"><span>03 / VIDEO</span><h3>1080p MP4</h3><p>Normalises mixed source files into a predictable video format for editing, sharing and portfolio preparation.</p></article>
+        <article class="reveal"><span>04 / TIMING</span><h3>Slow motion</h3><p>Produces two practical speed variants while keeping output naming and audio handling consistent.</p></article>
+        <article class="reveal"><span>05 / IMAGES</span><h3>Batch resize</h3><p>Turns a folder selection into consistently sized image assets without opening a separate graphics application.</p></article>
+        <article class="reveal"><span>06 / MAYA</span><h3>Random pose sequence</h3><p>Selects up to 151 images, unifies their dimensions and names them as a sequence so Maya displays every reference frame correctly.</p></article>
+      </div>
+    </section>
+
+    <section class="decisions-section page-shell">
+      <div class="section-heading reveal"><p class="eyebrow">Shared design</p><h2>Different outputs, one predictable way of working.</h2></div>
+      <div class="decision-grid">
+        <article class="reveal"><h3>Files stay nearby</h3><p>Outputs are created beside the selected source instead of disappearing into an unknown temporary folder.</p></article>
+        <article class="reveal"><h3>Batch-aware</h3><p>Actions accept multiple Finder selections and report success or failure for the complete operation.</p></article>
+        <article class="reveal"><h3>Explicit settings</h3><p>Frame rate, size, quality and naming rules live in the script so repeated results remain consistent.</p></article>
+        <article class="reveal"><h3>Quiet feedback</h3><p>System sounds provide a simple completion signal without forcing another application window into the workflow.</p></article>
+      </div>
+    </section>
+
+    <section class="next-project page-shell reveal"><span>End of collection</span><a href="../index.html">Back to all work <span aria-hidden="true">↗</span></a></section>
+  </main>
+
+  <footer class="site-footer page-shell"><span>Andrei Tverdiukov</span><span>Portfolio draft · Not published</span></footer>
+</body>
+</html>
