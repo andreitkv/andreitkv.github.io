@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="TKV Mirror Tools — a personal Maya animation workflow by Andrei Tverdiukov.">
+  <title>TKV Mirror Tools — Andrei Tverdiukov</title>
+  <link rel="stylesheet" href="../assets/styles.css?v=20260715-5">
+  <script src="../assets/site.js" defer></script>
+</head>
+<body class="compact-case">
+  <header class="site-header">
+    <a class="brand" href="../index.html" aria-label="Andrei Tverdiukov — Home">
+      <span class="brand-mark">AT</span>
+      <span>Andrei Tverdiukov</span>
+    </a>
+    <nav class="site-nav" aria-label="Project navigation">
+      <a href="#overview">Overview</a>
+      <a href="#workflow">Workflow</a>
+      <a href="../index.html">All work</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="case-hero page-shell" id="overview">
+      <div class="case-kicker reveal">
+        <span>Case study · 05</span>
+        <span>Personal production tool</span>
+      </div>
+      <h1 class="reveal case-title-medium">TKV Mirror<br><span>Tools</span></h1>
+      <div class="case-summary reveal">
+        <p>A one-hotkey Maya workflow for rebuilding cyclic character animation on the opposite side with the correct time offset.</p>
+        <dl class="case-meta">
+          <div><dt>Role</dt><dd>Workflow design &amp; development</dd></div>
+          <div><dt>Built with</dt><dd>Python · Maya Animation Layers</dd></div>
+          <div><dt>Tested on</dt><dd>Maya 2025 · macOS</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="hero-video-wrap page-shell reveal">
+      <video class="hero-video" controls playsinline preload="metadata" poster="../media/tkv-mirror-tools/web/tkv-mirror-tools-poster.jpg">
+        <source src="../media/tkv-mirror-tools/web/tkv-mirror-tools-overview.mp4" type="video/mp4">
+      </video>
+      <div class="video-caption">
+        <span>Full workflow overview</span>
+        <span>01:00</span>
+      </div>
+    </section>
+
+    <section class="compact-story page-shell" id="workflow">
+      <div class="compact-story-intro reveal">
+        <div>
+          <p class="eyebrow">Problem → solution</p>
+          <h2>Mirror the motion.<br>Keep control of the result.</h2>
+        </div>
+        <p>A cyclic animation needs more than inverted values: the opposite side also needs the correct half-cycle timing. One hotkey rebuilds both while keeping the generated result separate for review.</p>
+      </div>
+
+      <div class="compact-workflow-grid">
+        <article class="reveal">
+          <span>01 / Direction</span>
+          <h3>Detect the source</h3>
+          <p>The active one-sided Animation Layer or selected control determines which side drives the recalculation.</p>
+        </article>
+        <article class="reveal">
+          <span>02 / Motion</span>
+          <h3>Mirror and offset</h3>
+          <p>Paired controls are mapped to the opposite side and shifted by half of the playback cycle.</p>
+        </article>
+        <article class="reveal">
+          <span>03 / Safety</span>
+          <h3>Review before merging</h3>
+          <p>The generated motion stays on its own TkvMirror layer until the animator accepts the result.</p>
+        </article>
+      </div>
+
+      <details class="technical-notes reveal">
+        <summary>Technical notes <span>Open details</span></summary>
+        <div class="technical-notes-grid">
+          <div>
+            <h3>Rig-aware behaviour</h3>
+            <p>Supports common L / R naming patterns, namespaces, transform controls and joint-based fingers, with conflict checks before writing.</p>
+          </div>
+          <div>
+            <h3>Project scope</h3>
+            <p>Independently implemented for a personal production rig and tested in Maya 2025 on macOS. Other rigs may require rule adjustments.</p>
+          </div>
+        </div>
+      </details>
+    </section>
+
+    <section class="next-project page-shell reveal">
+      <span>End of case study</span>
+      <a href="../index.html">Back to all work <span aria-hidden="true">↗</span></a>
+    </section>
+  </main>
+
+  <footer class="site-footer page-shell">
+    <span>Andrei Tverdiukov</span>
+    <span>Portfolio draft · Not published</span>
+  </footer>
+</body>
+</html>

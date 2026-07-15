@@ -9,6 +9,7 @@ The current project index includes:
 - **TKV Video Downloader** — an authorised-media download and preparation workflow.
 - **TKV Russian Dubbing** — an AI-assisted Russian localisation pipeline.
 - **TKV Media Utilities** — a collection of focused video and image Quick Actions.
+- **TKV Mirror Tools** — a Maya workflow for rebuilding mirrored cyclic animation.
 
 The automation pages are portfolio case studies. They do not distribute source
 code, account data, cookies or access credentials.

@@ -5,13 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="TKV Russian Dubbing — an AI-assisted video localisation workflow by Andrei Tverdiukov.">
   <title>TKV Russian Dubbing — Andrei Tverdiukov</title>
-  <link rel="stylesheet" href="../assets/styles.css">
+  <link rel="stylesheet" href="../assets/styles.css?v=20260715-5">
   <script src="../assets/site.js" defer></script>
 </head>
-<body>
+<body class="compact-case">
   <header class="site-header">
     <a class="brand" href="../index.html" aria-label="Andrei Tverdiukov — Home"><span class="brand-mark">AT</span><span>Andrei Tverdiukov</span></a>
-    <nav class="site-nav" aria-label="Project navigation"><a href="#overview">Overview</a><a href="#pipeline">Pipeline</a><a href="../index.html">All work</a></nav>
+    <nav class="site-nav" aria-label="Project navigation"><a href="#overview">Overview</a><a href="#workflow">Workflow</a><a href="../index.html">All work</a></nav>
   </header>
 
   <main>
@@ -38,53 +38,24 @@
       </div>
     </section>
 
-    <section class="case-visual-wrap page-shell reveal" aria-label="Russian dubbing pipeline overview">
-      <div class="case-visual dub-case-visual">
-        <div class="visual-topline"><span>TKV RUSSIAN DUBBING</span><span>5 STAGES</span></div>
-        <div class="dub-pipeline">
-          <article><span>01</span><b>Audio</b><small>Extract WAV</small></article><i>→</i>
-          <article><span>02</span><b>Whisper</b><small>Speech → SRT</small></article><i>→</i>
-          <article><span>03</span><b>Adapt</b><small>Timed Russian</small></article><i>→</i>
-          <article><span>04</span><b>Voice</b><small>TTS segments</small></article><i>→</i>
-          <article class="is-accent"><span>05</span><b>Final MP4</b><small>Mix &amp; mux</small></article>
+    <section class="compact-story page-shell" id="workflow">
+      <div class="compact-story-intro reveal">
+        <div><p class="eyebrow">Problem → solution</p><h2>Translate meaning.<br>Respect the timing.</h2></div>
+        <p>A literal Russian translation often becomes too long for the original speech slot. The pipeline adapts language, timing and generated voice as one coordinated process.</p>
+      </div>
+      <div class="compact-workflow-grid">
+        <article class="reveal"><span>01 / Speech</span><h3>Transcribe the source</h3><p>FFmpeg prepares the audio and multilingual Whisper turns the original speech into timed subtitles.</p></article>
+        <article class="reveal"><span>02 / Language</span><h3>Adapt for the slot</h3><p>Russian lines preserve meaning, use a controlled glossary and shorten selectively when timing demands it.</p></article>
+        <article class="reveal"><span>03 / Audio</span><h3>Fit and finish</h3><p>Voice segments are timed, joined, mixed, normalised and attached to the final video.</p></article>
+      </div>
+      <details class="technical-notes reveal">
+        <summary>Technical notes <span>Open details</span></summary>
+        <div class="technical-notes-grid">
+          <div><h3>Validation &amp; reruns</h3><p>Subtitle structure is validated, overlong cues receive targeted retries, and per-line audio caching avoids rebuilding finished segments.</p></div>
+          <div><h3>Responsible use</h3><p>Intended for material I own or have permission to adapt. The Russian track uses a synthetic AI voice and is presented as such.</p></div>
         </div>
-        <div class="timeline-wave" aria-hidden="true"><span></span><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
-      </div>
-      <div class="video-caption"><span>End-to-end localisation workflow</span><span>Video → Russian MP4</span></div>
+      </details>
     </section>
-
-    <section class="story-section page-shell">
-      <div class="story-heading reveal"><p class="eyebrow">The problem</p><h2>A literal translation does not automatically become believable dubbing.</h2></div>
-      <div class="story-copy reveal">
-        <p>Translated subtitles often become longer than the original speech. Generated lines then overlap, rush unnaturally or leave awkward gaps, even when every individual tool works correctly.</p>
-        <p>I built one coordinated pipeline around timing limits. It preserves subtitle structure, shortens overlong Russian phrases, joins broken thoughts and fits each generated voice segment back into the available slot.</p>
-      </div>
-    </section>
-
-    <section class="quote-band"><div class="page-shell reveal"><p>Not just translated.<br>Timed, shaped<br><span>and assembled.</span></p></div></section>
-
-    <section class="pipeline-section page-shell" id="pipeline">
-      <div class="section-heading reveal"><p class="eyebrow">Inside the pipeline</p><h2>Five tools working as one repeatable process.</h2></div>
-      <div class="pipeline-detail-grid">
-        <article class="reveal"><span>01</span><h3>Transcribe</h3><p>FFmpeg extracts clean mono audio and multilingual Whisper detects the source language automatically.</p><small>VIDEO · WAV · SRT</small></article>
-        <article class="reveal"><span>02</span><h3>Adapt</h3><p>The Russian text keeps the original timecodes, follows an animation glossary and respects a length budget for every cue.</p><small>CONTEXT · GLOSSARY · LIMITS</small></article>
-        <article class="reveal"><span>03</span><h3>Validate</h3><p>Invalid subtitle output is rejected. Lines that exceed their slot receive a focused shortening pass instead of restarting the full translation.</p><small>SRT CHECK · TARGETED RETRY</small></article>
-        <article class="reveal"><span>04</span><h3>Fit speech</h3><p>Voice segments can be sped up, gently slowed or padded. Adjacent fragments are merged when they belong to one sentence.</p><small>TTS · TIMING · CACHE</small></article>
-        <article class="reveal"><span>05</span><h3>Finish audio</h3><p>Segments are placed on the timeline, mixed, equalised, compressed and normalised before the new audio is attached to the video.</p><small>EQ · LUFS · AAC</small></article>
-      </div>
-    </section>
-
-    <section class="decisions-section page-shell">
-      <div class="section-heading reveal"><p class="eyebrow">Key decisions</p><h2>The automation still leaves room for language and timing judgement.</h2></div>
-      <div class="decision-grid">
-        <article class="reveal"><h3>Meaning before wording</h3><p>Russian lines are shortened by meaning instead of mechanically cutting characters from a literal translation.</p></article>
-        <article class="reveal"><h3>Animation vocabulary</h3><p>A controlled glossary keeps specialist terms consistent in educational animation material.</p></article>
-        <article class="reveal"><h3>Natural speed limits</h3><p>The pipeline caps time stretching so fitting a slot does not destroy the character of the voice.</p></article>
-        <article class="reveal"><h3>Safe reruns</h3><p>Per-line audio caching and versioned output names make iteration faster without silently replacing a finished result.</p></article>
-      </div>
-    </section>
-
-    <section class="credit-section"><div class="page-shell reveal"><p class="eyebrow">Responsible use</p><p>The workflow is intended for material I own or have permission to adapt. The resulting Russian track uses a synthetic AI voice and is presented as such.</p></div></section>
     <section class="next-project page-shell reveal"><span>Next collection</span><a href="finder-media-utilities.html">TKV Media Utilities <span aria-hidden="true">↗</span></a></section>
   </main>
 

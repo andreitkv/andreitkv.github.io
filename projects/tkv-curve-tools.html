@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="TKV Curve Tools — a custom Maya Graph Editor workflow by Andrei Tverdiukov.">
   <title>TKV Curve Tools — Andrei Tverdiukov</title>
-  <link rel="stylesheet" href="../assets/styles.css">
+  <link rel="stylesheet" href="../assets/styles.css?v=20260715-5">
   <script src="../assets/site.js" defer></script>
 </head>
-<body>
+<body class="compact-case">
   <header class="site-header">
     <a class="brand" href="../index.html" aria-label="Andrei Tverdiukov — Home">
       <span class="brand-mark">AT</span>
@@ -16,7 +16,7 @@
     </a>
     <nav class="site-nav" aria-label="Project navigation">
       <a href="#overview">Overview</a>
-      <a href="#features">Highlights</a>
+      <a href="#workflow">Workflow</a>
       <a href="../index.html">All work</a>
     </nav>
   </header>
@@ -48,148 +48,23 @@
       </div>
     </section>
 
-    <section class="story-section page-shell">
-      <div class="story-heading reveal">
-        <p class="eyebrow">The problem</p>
-        <h2>I needed a focused animation panel, not another oversized toolbox.</h2>
+    <section class="compact-story page-shell" id="workflow">
+      <div class="compact-story-intro reveal">
+        <div><p class="eyebrow">Problem → solution</p><h2>Shape curves faster.<br>Stay in the flow.</h2></div>
+        <p>I needed a focused set of daily animation commands inside Maya Graph Editor, without searching through large menus or opening another toolbox.</p>
       </div>
-      <div class="story-copy reveal">
-        <p>I regularly used only a small group of curve and blending operations from larger animation toolsets. The rest added visual noise and pushed frequent commands into menus, hotkeys or separate windows.</p>
-        <p>I built TKV Curve Tools around familiar animBot-style curve operations and my own daily workflow. The current implementation, Graph Editor integration and production utilities are maintained as one compact personal toolset.</p>
+      <div class="compact-workflow-grid">
+        <article class="reveal"><span>01 / Curves</span><h3>Shape the motion</h3><p>Pull, Push, Ease, Noise, Wave, Smooth and Rough adjust value and timing without rebuilding curves by hand.</p></article>
+        <article class="reveal"><span>02 / Blending</span><h3>Control in-betweens</h3><p>Tweener, Blend to Ease and Blend to Tangent provide direct control over spacing and tangent influence.</p></article>
+        <article class="reveal"><span>03 / Production</span><h3>Remove repeated steps</h3><p>Infinity modes, reverse animation, selection tools and key-timing utilities stay in one predictable row.</p></article>
       </div>
-    </section>
-
-    <section class="quote-band">
-      <div class="page-shell reveal">
-        <p>Less searching.<br>Fewer repeated clicks.<br><span>More attention on the motion.</span></p>
-      </div>
-    </section>
-
-    <section class="toolkit-section page-shell">
-      <div class="section-heading reveal">
-        <p class="eyebrow">The toolkit</p>
-        <h2>One compact row. Three layers of animation work.</h2>
-      </div>
-
-      <div class="tool-groups">
-        <article class="tool-group reveal">
-          <span class="tool-number">01</span>
-          <h3>Curve shaping</h3>
-          <p>Fast value and timing changes without rebuilding the curve by hand.</p>
-          <ul>
-            <li>Pull / Push</li>
-            <li>Ease In / Ease Out</li>
-            <li>Noise / Wave</li>
-            <li>Smooth / Rough</li>
-            <li>Scale from Average</li>
-          </ul>
-        </article>
-
-        <article class="tool-group reveal">
-          <span class="tool-number">02</span>
-          <h3>Blending & tangents</h3>
-          <p>Direct control over in-betweens, easing profiles and tangent influence.</p>
-          <ul>
-            <li>Tweener</li>
-            <li>Blend to Ease</li>
-            <li>Blend to Tangent</li>
-          </ul>
-        </article>
-
-        <article class="tool-group reveal">
-          <span class="tool-number">03</span>
-          <h3>Production shortcuts</h3>
-          <p>Common Maya actions and custom workflow utilities in one predictable place.</p>
-          <ul>
-            <li>Tangent & infinity modes</li>
-            <li>Select Object from Curve</li>
-            <li>Shrink Key Selection</li>
-            <li>Reverse Animation</li>
-            <li>Bake from Last Selected</li>
-          </ul>
-        </article>
-      </div>
-    </section>
-
-    <section class="highlights-section page-shell" id="features">
-      <div class="section-heading reveal">
-        <p class="eyebrow">Selected highlights</p>
-        <h2>The parts that changed my workflow the most.</h2>
-      </div>
-
-      <article class="feature-row reveal">
-        <div class="feature-video">
-          <video muted loop playsinline preload="metadata" poster="../media/tkv-curve-tools/web/blend-to-tangent.jpg">
-            <source src="../media/tkv-curve-tools/web/blend-to-tangent.mp4" type="video/mp4">
-          </video>
-          <button class="video-toggle" type="button" aria-label="Play Blend to Tangent video">Play</button>
+      <details class="technical-notes reveal">
+        <summary>Technical notes <span>Open details</span></summary>
+        <div class="technical-notes-grid">
+          <div><h3>Selected highlights</h3><p>Blend to Tangent reacts to the selected handle, Reverse Animation preserves useful timing, and Bake from Last Selected transfers reference key timing.</p></div>
+          <div><h3>Context &amp; scope</h3><p>Familiar interaction ideas were inspired by animBot; the current Python implementation and Graph Editor integration were built for my own workflow and tested in Maya 2025 on macOS.</p></div>
         </div>
-        <div class="feature-copy">
-          <span class="feature-index">01 / Tangents</span>
-          <h3>Blend to Tangent</h3>
-          <p>The slider recognises left and right tangent components separately. Dragging in either direction changes the intended side, so the interaction stays visually connected to the selected handle.</p>
-        </div>
-      </article>
-
-      <article class="feature-row reverse reveal">
-        <div class="feature-video">
-          <video muted loop playsinline preload="metadata" poster="../media/tkv-curve-tools/web/reverse-animation.jpg">
-            <source src="../media/tkv-curve-tools/web/reverse-animation.mp4" type="video/mp4">
-          </video>
-          <button class="video-toggle" type="button" aria-label="Play Reverse Animation video">Play</button>
-        </div>
-        <div class="feature-copy">
-          <span class="feature-index">02 / Locomotion</span>
-          <h3>Reverse Animation</h3>
-          <p>A one-click operation for turning forward locomotion into backward motion while preserving the useful timing structure. It replaces a repetitive sequence of curve edits with one controlled action.</p>
-        </div>
-      </article>
-
-      <article class="feature-row reveal">
-        <div class="feature-video">
-          <video muted loop playsinline preload="metadata" poster="../media/tkv-curve-tools/web/bake-from-last-selected.jpg">
-            <source src="../media/tkv-curve-tools/web/bake-from-last-selected.mp4" type="video/mp4">
-          </video>
-          <button class="video-toggle" type="button" aria-label="Play Bake from Last Selected video">Play</button>
-        </div>
-        <div class="feature-copy">
-          <span class="feature-index">03 / Key timing</span>
-          <h3>Bake from Last Selected</h3>
-          <p>Dense animation can be rebuilt using the key timing of the last selected reference control — useful for blocking, cleanup and checking motion in a stepped workflow.</p>
-        </div>
-      </article>
-    </section>
-
-    <section class="decisions-section page-shell">
-      <div class="section-heading reveal">
-        <p class="eyebrow">Design decisions</p>
-        <h2>Built for a personal production workflow.</h2>
-      </div>
-      <div class="decision-grid">
-        <article class="reveal">
-          <h3>Graph Editor first</h3>
-          <p>The interface stays attached to the place where the work happens instead of opening another floating tool window.</p>
-        </article>
-        <article class="reveal">
-          <h3>Context-sensitive input</h3>
-          <p>Selection, tangent side and modifier keys change how an operation behaves without multiplying buttons.</p>
-        </article>
-        <article class="reveal">
-          <h3>Safe iteration</h3>
-          <p>Undo-aware operations and captured curve data keep slider interaction responsive and reversible.</p>
-        </article>
-        <article class="reveal">
-          <h3>Honest scope</h3>
-          <p>This is a personal tool tested in Maya 2025 on macOS. Compatibility with other environments has not been claimed.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="credit-section">
-      <div class="page-shell reveal">
-        <p class="eyebrow">Context & attribution</p>
-        <p>Several familiar interaction ideas were inspired by animBot, while standard tangent and infinity actions come from Maya. The implementation, compact Graph Editor integration and workflow-specific tools were developed for my own animation process.</p>
-      </div>
+      </details>
     </section>
 
     <section class="next-project page-shell reveal">

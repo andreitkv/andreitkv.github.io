@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="TKV Video Downloader — a personal macOS workflow by Andrei Tverdiukov for preparing authorised media for editing.">
   <title>TKV Video Downloader — Andrei Tverdiukov</title>
-  <link rel="stylesheet" href="../assets/styles.css">
+  <link rel="stylesheet" href="../assets/styles.css?v=20260715-5">
   <script src="../assets/site.js" defer></script>
 </head>
-<body>
+<body class="compact-case">
   <header class="site-header">
     <a class="brand" href="../index.html" aria-label="Andrei Tverdiukov — Home">
       <span class="brand-mark">AT</span>
@@ -48,82 +48,23 @@
       </div>
     </section>
 
-    <section class="case-visual-wrap page-shell reveal" aria-label="Media intake workflow overview">
-      <div class="case-visual intake-case-visual">
-        <div class="visual-topline"><span>MEDIA INTAKE / QUICK ACTION</span><span>READY</span></div>
-        <div class="intake-pipeline">
-          <article><span>01</span><b>Authorised link</b><small>Single media source</small></article>
-          <i aria-hidden="true">→</i>
-          <article><span>02</span><b>Resolve &amp; validate</b><small>Formats · file checks</small></article>
-          <i aria-hidden="true">→</i>
-          <article><span>03</span><b>Prepare media</b><small>H.264 · AAC · 1080p</small></article>
-          <i aria-hidden="true">→</i>
-          <article class="is-accent"><span>04</span><b>Editor-ready MP4</b><small>Saved to Downloads</small></article>
+    <section class="compact-story page-shell" id="workflow">
+      <div class="compact-story-intro reveal">
+        <div><p class="eyebrow">Problem → solution</p><h2>One link.<br>One usable file.</h2></div>
+        <p>A successful transfer was not enough if the result still needed manual codec checks and conversion before it could enter an editing timeline.</p>
+      </div>
+      <div class="compact-workflow-grid">
+        <article class="reveal"><span>01 / Input</span><h3>Start in Finder</h3><p>A macOS Quick Action accepts one authorised media link and checks the local tools before starting.</p></article>
+        <article class="reveal"><span>02 / Validation</span><h3>Resolve and verify</h3><p>Controlled format fallbacks, output checks and FFprobe validation prevent half-finished results.</p></article>
+        <article class="reveal"><span>03 / Output</span><h3>Prepare the MP4</h3><p>Unexpected media is normalised to a predictable H.264, AAC and 1080p editing format.</p></article>
+      </div>
+      <details class="technical-notes reveal">
+        <summary>Technical notes <span>Open details</span></summary>
+        <div class="technical-notes-grid">
+          <div><h3>Failure handling</h3><p>The workflow checks runtime availability, rejects unsuitable input, tries controlled format variants and confirms that the final file exists and is non-empty.</p></div>
+          <div><h3>Responsible scope</h3><p>Designed only for media I own or have permission to process. This portfolio does not distribute source code, credentials or account data.</p></div>
         </div>
-        <div class="visual-status"><span><i></i> Format verified</span><span><i></i> Audio checked</span><span><i></i> Conversion complete</span></div>
-      </div>
-      <div class="video-caption"><span>Workflow diagram</span><span>Link → MP4</span></div>
-    </section>
-
-    <section class="story-section page-shell">
-      <div class="story-heading reveal">
-        <p class="eyebrow">The problem</p>
-        <h2>Getting a reference was only the first half of the job.</h2>
-      </div>
-      <div class="story-copy reveal">
-        <p>Media arrived in different containers, codecs and resolutions. A successful transfer could still leave me with a file that needed another manual conversion before it was useful in an editing timeline.</p>
-        <p>I combined source handling, fallback logic, file validation and format preparation into one Finder-friendly action. The result is either a usable MP4 or a clear error — not a half-finished download.</p>
-      </div>
-    </section>
-
-    <section class="quote-band">
-      <div class="page-shell reveal">
-        <p>One link.<br>One finished file.<br><span>No cleanup ritual.</span></p>
-      </div>
-    </section>
-
-    <section class="toolkit-section page-shell" id="workflow">
-      <div class="section-heading reveal">
-        <p class="eyebrow">The workflow</p>
-        <h2>Built around failure handling, not only the happy path.</h2>
-      </div>
-      <div class="tool-groups">
-        <article class="tool-group reveal">
-          <span class="tool-number">01</span>
-          <h3>Preflight</h3>
-          <p>The action checks its local tools and rejects empty or unsuitable input before starting a long operation.</p>
-          <ul><li>Runtime checks</li><li>Single-item guard</li><li>Source validation</li><li>Clear notifications</li></ul>
-        </article>
-        <article class="tool-group reveal">
-          <span class="tool-number">02</span>
-          <h3>Format fallbacks</h3>
-          <p>Several format strategies are tried in a controlled order so a changed source does not immediately break the workflow.</p>
-          <ul><li>Video + audio variants</li><li>Container merging</li><li>Output path capture</li><li>File existence checks</li></ul>
-        </article>
-        <article class="tool-group reveal">
-          <span class="tool-number">03</span>
-          <h3>Editor preparation</h3>
-          <p>FFprobe checks the result. Files outside the expected H.264 and AAC combination are converted automatically.</p>
-          <ul><li>Codec inspection</li><li>1080p scaling</li><li>H.264 video</li><li>AAC audio</li></ul>
-        </article>
-      </div>
-    </section>
-
-    <section class="decisions-section page-shell">
-      <div class="section-heading reveal"><p class="eyebrow">Design decisions</p><h2>A personal tool with an intentionally narrow public scope.</h2></div>
-      <div class="decision-grid">
-        <article class="reveal"><h3>Finder first</h3><p>The workflow runs as a macOS Quick Action instead of asking for repeated Terminal commands.</p></article>
-        <article class="reveal"><h3>One item at a time</h3><p>Playlist-style input is deliberately avoided. Each run produces one predictable media file.</p></article>
-        <article class="reveal"><h3>Useful output</h3><p>Success means the resulting file exists, is non-empty and is ready for the next production step.</p></article>
-        <article class="reveal"><h3>Responsible use</h3><p>The workflow is intended only for media I own or have permission to download and process.</p></article>
-      </div>
-    </section>
-
-    <section class="credit-section">
-      <div class="page-shell reveal">
-        <p class="eyebrow">Availability</p>
-        <p>This is a private workflow case study, not a public downloading service. Source code, account data and access credentials are not distributed through this portfolio.</p>
-      </div>
+      </details>
     </section>
 
     <section class="next-project page-shell reveal"><span>Next case study</span><a href="russian-dubbing-pipeline.html">TKV Russian Dubbing <span aria-hidden="true">↗</span></a></section>
