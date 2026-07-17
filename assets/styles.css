@@ -622,6 +622,53 @@ button {
     linear-gradient(145deg, #171b1d, #0e1011);
 }
 
+.default-pose-cover {
+  background:
+    radial-gradient(circle at 76% 46%, rgba(207, 255, 70, 0.17), transparent 27%),
+    linear-gradient(145deg, #171b1d, #0e1011);
+}
+
+.pose-reset-mark {
+  position: absolute;
+  z-index: 2;
+  top: 50px;
+  right: 18px;
+  display: grid;
+  width: 58px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4px;
+  align-items: center;
+}
+
+.pose-reset-mark span {
+  display: grid;
+  height: 18px;
+  place-items: center;
+  border: 1px solid rgba(207, 255, 70, 0.42);
+  border-radius: 4px;
+  color: var(--accent);
+  background: rgba(8, 10, 11, 0.78);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 8px;
+}
+
+.pose-reset-mark b {
+  grid-column: 1 / -1;
+  color: rgba(207, 255, 70, 0.58);
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 1;
+  text-align: center;
+}
+
+.default-pose-cover .cover-promise span {
+  max-width: 175px;
+}
+
+.default-pose-cover .catalog-preview {
+  object-position: 24% center;
+}
+
 .mirror-tools-cover::before,
 .mirror-tools-cover::after {
   position: absolute;

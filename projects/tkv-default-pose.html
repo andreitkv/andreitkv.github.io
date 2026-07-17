@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Default Pose — a context-aware Maya animation workflow by Andrei Tverdiukov.">
+  <title>Default Pose — Andrei Tverdiukov</title>
+  <link rel="stylesheet" href="../assets/styles.css?v=20260717-2">
+  <script src="../assets/site.js" defer></script>
+</head>
+<body class="compact-case">
+  <header class="site-header">
+    <a class="brand" href="../index.html" aria-label="Andrei Tverdiukov — Home">
+      <span class="brand-mark">AT</span>
+      <span>Andrei Tverdiukov</span>
+    </a>
+    <nav class="site-nav" aria-label="Project navigation">
+      <a href="#overview">Overview</a>
+      <a href="#workflow">Workflow</a>
+      <a href="../index.html">All work</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="case-hero page-shell" id="overview">
+      <div class="case-kicker reveal">
+        <span>Case study · 06</span>
+        <span>Personal production tool</span>
+      </div>
+      <h1 class="reveal case-title-medium">Default<br><span>Pose</span></h1>
+      <div class="case-summary reveal">
+        <p>A rig-aware Maya workflow that restores the intended default values and clears animation precisely where I am already working.</p>
+        <dl class="case-meta">
+          <div><dt>Role</dt><dd>Workflow design &amp; development</dd></div>
+          <div><dt>Built with</dt><dd>Python · Maya animation contexts</dd></div>
+          <div><dt>Tested on</dt><dd>Maya 2025 · macOS</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="hero-video-wrap page-shell reveal">
+      <video class="hero-video" controls playsinline preload="metadata" poster="../media/tkv-default-pose/web/tkv-default-pose-poster.jpg">
+        <source src="../media/tkv-default-pose/web/tkv-default-pose-overview.mp4" type="video/mp4">
+      </video>
+      <div class="video-caption">
+        <span>English workflow tutorial</span>
+        <span>01:36</span>
+      </div>
+    </section>
+
+    <section class="compact-story page-shell" id="workflow">
+      <div class="compact-story-intro reveal">
+        <div>
+          <p class="eyebrow">Problem → solution</p>
+          <h2>Reset the right thing.<br>Leave the rest alone.</h2>
+        </div>
+        <p>A default-pose command should not flatten every channel. The tool reads the active Maya context first, then limits the reset or cleanup to the selected keys, time range, axes or controls.</p>
+      </div>
+
+      <div class="compact-workflow-grid">
+        <article class="reveal">
+          <span>01 / Capture</span>
+          <h3>Remember each rig</h3>
+          <p>Namespace-neutral profiles store the rig's real Translate, Rotate and Scale defaults and work whether the rig is opened directly or referenced.</p>
+        </article>
+        <article class="reveal">
+          <span>02 / Reset</span>
+          <h3>Follow the selection</h3>
+          <p>Reset commands act on selected Graph Editor keys, a highlighted Time Slider range or the current pose, with Channel Box axes used as an extra filter.</p>
+        </article>
+        <article class="reveal">
+          <span>03 / Cleanup</span>
+          <h3>Clear only what matters</h3>
+          <p>Clear Keys can remove exact keys, clean a time range, break selected channel connections or remove channels from a Trax Character Set.</p>
+        </article>
+      </div>
+
+      <details class="technical-notes reveal">
+        <summary>Technical notes <span>Open details</span></summary>
+        <div class="technical-notes-grid">
+          <div>
+            <h3>Safe, reversible operations</h3>
+            <p>Each action stays inside one Maya Undo step. Updating a stored rig profile requires confirmation and creates a timestamped backup first.</p>
+          </div>
+          <div>
+            <h3>Project scope</h3>
+            <p>Built as an independent alternative to Studio Library for a personal animation workflow and tested in Maya 2025 on macOS.</p>
+          </div>
+        </div>
+      </details>
+    </section>
+
+    <section class="next-project page-shell reveal">
+      <span>End of case study</span>
+      <a href="../index.html">Back to all work <span aria-hidden="true">↗</span></a>
+    </section>
+  </main>
+
+  <footer class="site-footer page-shell">
+    <span>Andrei Tverdiukov</span>
+    <span>Portfolio draft · Not published</span>
+  </footer>
+</body>
+</html>
