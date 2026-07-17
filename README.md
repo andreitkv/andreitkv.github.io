@@ -3,13 +3,11 @@
 Local portfolio draft for 3D character animation, animation tools and practical
 macOS automation.
 
-The current project index includes:
+The current public project index includes:
 
-- **Curve Tools** — a personal Maya Graph Editor workflow.
 - **Video Downloader** — an authorised-media download and preparation workflow.
 - **Russian Dubbing** — an AI-assisted Russian localisation pipeline.
 - **Media Utilities** — a collection of focused video and image Quick Actions.
-- **Mirror Tools** — a Maya workflow for rebuilding mirrored cyclic animation.
 - **Default Pose** — a context-aware Maya workflow for restoring rig defaults and clearing animation.
 
 The automation pages are portfolio case studies. They do not distribute source
