@@ -1233,6 +1233,10 @@ button {
   padding: 14px 4px 0;
 }
 
+.catalog-card-mirror {
+  order: 1;
+}
+
 .story-section {
   display: grid;
   grid-template-columns: 1fr 1fr;
