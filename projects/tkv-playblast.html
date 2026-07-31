@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Batch Playblast — a personal multi-camera Maya workflow by Andrei Tverdiukov.">
+  <title>Batch Playblast — Andrei Tverdiukov</title>
+  <link rel="stylesheet" href="../assets/styles.css?v=20260731-1">
+  <script src="../assets/site.js" defer></script>
+</head>
+<body class="compact-case">
+  <header class="site-header">
+    <a class="brand" href="../index.html" aria-label="Andrei Tverdiukov — Home">
+      <span class="brand-mark">AT</span>
+      <span>Andrei Tverdiukov</span>
+    </a>
+    <nav class="site-nav" aria-label="Project navigation">
+      <a href="#overview">Overview</a>
+      <a href="#workflow">Workflow</a>
+      <a href="../index.html">All work</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="case-hero page-shell" id="overview">
+      <div class="case-kicker reveal">
+        <span>Case study · 06</span>
+        <span>Personal production tool</span>
+      </div>
+      <h1 class="reveal case-title-medium">Batch<br><span>Playblast</span></h1>
+      <div class="case-summary reveal">
+        <p>A batch-playblast workflow for creating consistent review files from selected Maya cameras without repeating the same setup for every view.</p>
+        <dl class="case-meta">
+          <div><dt>Role</dt><dd>Workflow design &amp; development</dd></div>
+          <div><dt>Built with</dt><dd>Python · Maya Playblast · FFmpeg</dd></div>
+          <div><dt>Tested on</dt><dd>Maya 2025 · macOS</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="hero-video-wrap page-shell reveal">
+      <div class="case-video-item">
+        <video class="hero-video" controls playsinline preload="metadata" poster="../media/tkv-playblast/web/tkv-playblast-poster.jpg?v=20260731-2">
+          <source src="../media/tkv-playblast/web/tkv-playblast-overview.mp4?v=20260731-2" type="video/mp4">
+        </video>
+        <div class="video-caption">
+          <span>Multi-camera playblast workflow</span>
+          <span>00:37</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="compact-story page-shell" id="workflow">
+      <div class="compact-story-intro reveal">
+        <div>
+          <p class="eyebrow">Problem → solution</p>
+          <h2>Select the views.<br>Build every review.</h2>
+        </div>
+        <p>Producing the same playblast from several cameras means repeatedly changing the active view, frame range, viewport display and output settings. This tool brings that work into one controlled batch.</p>
+      </div>
+
+      <div class="compact-workflow-grid">
+        <article class="reveal">
+          <span>01 / Cameras</span>
+          <h3>Choose every view</h3>
+          <p>Select the cameras that matter and give each output its own name and frame range.</p>
+        </article>
+        <article class="reveal">
+          <span>02 / Viewport</span>
+          <h3>Keep reviews consistent</h3>
+          <p>Control resolution, quality, offscreen capture and the viewport elements included in every playblast.</p>
+        </article>
+        <article class="reveal">
+          <span>03 / Delivery</span>
+          <h3>Finish as MP4</h3>
+          <p>Create MOV captures and automatically convert successful results to H.264 MP4 files with FFmpeg.</p>
+        </article>
+      </div>
+
+      <details class="technical-notes reveal">
+        <summary>Technical notes <span>Open details</span></summary>
+        <div class="technical-notes-grid">
+          <div>
+            <h3>State restoration</h3>
+            <p>The workflow temporarily changes cameras and viewport settings, then restores the active view, current frame and display state when the batch finishes.</p>
+          </div>
+          <div>
+            <h3>Safe conversion</h3>
+            <p>The source MOV is removed only after FFmpeg successfully creates the MP4. Settings are stored separately from Maya preferences and reused on the next session.</p>
+          </div>
+        </div>
+      </details>
+    </section>
+
+    <section class="next-project page-shell reveal">
+      <span>End of case study</span>
+      <a href="../index.html">Back to all work <span aria-hidden="true">↗</span></a>
+    </section>
+  </main>
+
+  <footer class="site-footer page-shell">
+    <span>Andrei Tverdiukov</span>
+    <span>Selected work · 2026</span>
+  </footer>
+</body>
+</html>

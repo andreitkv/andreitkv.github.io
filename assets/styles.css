@@ -628,6 +628,55 @@ button {
     linear-gradient(145deg, #171b1d, #0e1011);
 }
 
+.playblast-cover {
+  background:
+    radial-gradient(circle at 76% 38%, rgba(207, 255, 70, 0.16), transparent 28%),
+    linear-gradient(145deg, #171b1d, #0e1011);
+}
+
+.playblast-camera-stack {
+  position: absolute;
+  z-index: 2;
+  top: 62px;
+  right: 22px;
+  display: grid;
+  width: 108px;
+  gap: 6px;
+  transform: rotate(-3deg);
+}
+
+.playblast-camera-stack span {
+  display: flex;
+  height: 32px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+  border: 1px solid rgba(207, 255, 70, 0.34);
+  border-radius: 5px;
+  color: var(--accent);
+  background: rgba(8, 10, 11, 0.82);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 8px;
+  letter-spacing: 0.1em;
+}
+
+.playblast-camera-stack span::after {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 10px rgba(207, 255, 70, 0.42);
+  content: "";
+}
+
+.playblast-cover .cover-promise span {
+  max-width: 180px;
+}
+
+.playblast-cover .catalog-preview {
+  object-position: 62% center;
+}
+
 .pose-reset-mark {
   position: absolute;
   z-index: 2;
@@ -1234,7 +1283,27 @@ button {
 }
 
 .catalog-card-mirror {
-  order: 1;
+  order: 20;
+}
+
+.catalog-card-playblast {
+  order: 10;
+}
+
+.catalog-card-default-pose {
+  order: 30;
+}
+
+.catalog-card-downloader {
+  order: 110;
+}
+
+.catalog-card-media-utilities {
+  order: 100;
+}
+
+.catalog-card-dubbing {
+  order: 120;
 }
 
 .story-section {
