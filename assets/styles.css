@@ -634,6 +634,66 @@ button {
     linear-gradient(145deg, #171b1d, #0e1011);
 }
 
+.motion-trail-cover {
+  background:
+    radial-gradient(circle at 76% 42%, rgba(207, 255, 70, 0.17), transparent 30%),
+    linear-gradient(145deg, #171b1d, #0e1011);
+}
+
+.motion-trail-mark {
+  position: absolute;
+  z-index: 2;
+  top: 58px;
+  right: 22px;
+  width: 126px;
+  height: 112px;
+  transform: rotate(-8deg);
+}
+
+.motion-trail-mark::before,
+.motion-trail-mark::after {
+  position: absolute;
+  border-top: 2px solid rgba(207, 255, 70, 0.72);
+  border-radius: 50%;
+  content: "";
+}
+
+.motion-trail-mark::before {
+  inset: 24px 12px 30px 6px;
+  transform: rotate(20deg);
+}
+
+.motion-trail-mark::after {
+  inset: 44px 2px 8px 34px;
+  transform: rotate(-24deg);
+}
+
+.motion-trail-mark i {
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border: 1px solid var(--accent);
+  border-radius: 50%;
+  background: #111516;
+  box-shadow: 0 0 10px rgba(207, 255, 70, 0.38);
+}
+
+.motion-trail-mark i:nth-child(1) { left: 2px; top: 64px; }
+.motion-trail-mark i:nth-child(2) { left: 20px; top: 38px; }
+.motion-trail-mark i:nth-child(3) { left: 44px; top: 24px; }
+.motion-trail-mark i:nth-child(4) { left: 67px; top: 29px; background: var(--accent); }
+.motion-trail-mark i:nth-child(5) { left: 88px; top: 48px; }
+.motion-trail-mark i:nth-child(6) { left: 105px; top: 72px; }
+.motion-trail-mark i:nth-child(7) { left: 117px; top: 98px; }
+
+.motion-trail-cover .cover-promise span {
+  max-width: 185px;
+}
+
+.motion-trail-cover .catalog-preview {
+  object-position: 20% center;
+}
+
 .playblast-camera-stack {
   position: absolute;
   z-index: 2;
@@ -674,7 +734,7 @@ button {
 }
 
 .playblast-cover .catalog-preview {
-  object-position: 62% center;
+  object-position: 68% center;
 }
 
 .pose-reset-mark {
@@ -1284,6 +1344,10 @@ button {
 
 .catalog-card-mirror {
   order: 20;
+}
+
+.catalog-card-motion-trail {
+  order: 0;
 }
 
 .catalog-card-playblast {

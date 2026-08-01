@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Motion Trail — a focused Maya motion-path workflow by Andrei Tverdiukov.">
+  <title>Motion Trail — Andrei Tverdiukov</title>
+  <link rel="stylesheet" href="../assets/styles.css?v=20260801-4">
+  <script src="../assets/site.js" defer></script>
+</head>
+<body class="compact-case">
+  <header class="site-header">
+    <a class="brand" href="../index.html" aria-label="Andrei Tverdiukov — Home">
+      <span class="brand-mark">AT</span>
+      <span>Andrei Tverdiukov</span>
+    </a>
+    <nav class="site-nav" aria-label="Project navigation">
+      <a href="#overview">Overview</a>
+      <a href="#workflow">Workflow</a>
+      <a href="../index.html">All work</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="case-hero page-shell" id="overview">
+      <div class="case-kicker reveal">
+        <span>Case study · 07</span>
+        <span>Personal animation tool</span>
+      </div>
+      <h1 class="reveal case-title-medium">Motion<br><span>Trail</span></h1>
+      <div class="case-summary reveal">
+        <p>A focused motion-trail tool for reading arcs, spacing and direction directly in the Maya viewport while animation is still changing.</p>
+        <dl class="case-meta">
+          <div><dt>Role</dt><dd>Workflow design &amp; development</dd></div>
+          <div><dt>Built with</dt><dd>Python · Maya API 2.0 · Viewport 2.0</dd></div>
+          <div><dt>Tested on</dt><dd>Maya 2025 · macOS</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="hero-video-wrap page-shell reveal">
+      <div class="case-video-item">
+        <video class="hero-video" controls playsinline preload="metadata" poster="../media/motion-trail/web/motion-trail-poster.jpg">
+          <source src="../media/motion-trail/web/motion-trail-overview.mp4" type="video/mp4">
+        </video>
+        <div class="video-caption">
+          <span>Motion Trail workflow</span>
+          <span>00:31</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="compact-story page-shell" id="workflow">
+      <div class="compact-story-intro reveal">
+        <div>
+          <p class="eyebrow">Problem → solution</p>
+          <h2>See the motion.<br>Keep animating.</h2>
+        </div>
+        <p>Judging an arc only from playback can hide uneven spacing and small direction changes. Motion Trail turns the selected control's movement into a clear viewport path that follows the real animated result.</p>
+      </div>
+
+      <div class="compact-workflow-grid">
+        <article class="reveal">
+          <span>01 / Create</span>
+          <h3>Select and toggle</h3>
+          <p>Create or remove trails from the current selection with one command, without changing the animator's selection.</p>
+        </article>
+        <article class="reveal">
+          <span>02 / Read</span>
+          <h3>Follow the real path</h3>
+          <p>The trail samples world-space motion, including movement coming from parents, constraints, IK and animation layers.</p>
+        </article>
+        <article class="reveal">
+          <span>03 / Adjust</span>
+          <h3>Keep only useful controls</h3>
+          <p>Choose the visible frame range and line width from two compact presets while the trail updates with animation edits.</p>
+        </article>
+      </div>
+
+      <details class="technical-notes reveal">
+        <summary>Technical notes <span>Open details</span></summary>
+        <div class="technical-notes-grid">
+          <div>
+            <h3>Reliable live updates</h3>
+            <p>The tool listens for world-matrix, keyframe and animation-layer changes, then rebuilds the trail without permanent background polling.</p>
+          </div>
+          <div>
+            <h3>Focused personal workflow</h3>
+            <p>The interface keeps only the controls used in everyday animation: four range presets and three line-width presets.</p>
+          </div>
+        </div>
+      </details>
+    </section>
+
+    <section class="next-project page-shell reveal">
+      <span>End of case study</span>
+      <a href="../index.html">Back to all work <span aria-hidden="true">↗</span></a>
+    </section>
+  </main>
+
+  <footer class="site-footer page-shell">
+    <span>Andrei Tverdiukov</span>
+    <span>Selected work · 2026</span>
+  </footer>
+</body>
+</html>
