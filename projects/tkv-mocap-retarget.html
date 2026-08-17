@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Retarget Tool — a profile-driven Maya mocap workflow by Andrei Tverdiukov.">
+  <title>Retarget Tool — Andrei Tverdiukov</title>
+  <link rel="stylesheet" href="../assets/styles.css?v=20260817-1">
+  <script src="../assets/site.js" defer></script>
+</head>
+<body class="compact-case">
+  <header class="site-header">
+    <a class="brand" href="../index.html" aria-label="Andrei Tverdiukov — Home">
+      <span class="brand-mark">AT</span>
+      <span>Andrei Tverdiukov</span>
+    </a>
+    <nav class="site-nav" aria-label="Project navigation">
+      <a href="#overview">Overview</a>
+      <a href="#workflow">Workflow</a>
+      <a href="../index.html">All work</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="case-hero page-shell" id="overview">
+      <div class="case-kicker reveal">
+        <span>Case study · 08</span>
+        <span>Personal animation tool</span>
+      </div>
+      <h1 class="reveal case-title-medium">Retarget<br><span>Tool</span></h1>
+      <div class="case-summary reveal">
+        <p>A profile-driven Maya workflow for fitting mocap motion to a clean target skeleton and reviewing the transferred result before the final bake.</p>
+        <dl class="case-meta">
+          <div><dt>Role</dt><dd>Workflow design &amp; development</dd></div>
+          <div><dt>Built with</dt><dd>Python · Maya constraints · Trax</dd></div>
+          <div><dt>Tested on</dt><dd>Maya 2025 · macOS</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="hero-video-wrap page-shell reveal">
+      <div class="case-video-item">
+        <video class="hero-video" controls playsinline preload="metadata" poster="../media/tkv-mocap-tools/web/tkv-mocap-retarget-poster.jpg?v=20260817-1">
+          <source src="../media/tkv-mocap-tools/web/tkv-mocap-retarget-overview.mp4?v=20260817-1" type="video/mp4">
+        </video>
+        <div class="video-caption">
+          <span>Mocap retarget workflow</span>
+          <span>01:28</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="compact-story page-shell" id="workflow">
+      <div class="compact-story-intro reveal">
+        <div>
+          <p class="eyebrow">Problem → solution</p>
+          <h2>Match the skeletons.<br>Review the motion.</h2>
+        </div>
+        <p>Different joint counts, proportions and bind directions make mocap transfer difficult to judge and slow to rebuild by hand. Retarget Tool uses known source and target profiles to fit the two skeletons and create a live, reversible preview.</p>
+      </div>
+
+      <div class="compact-workflow-grid">
+        <article class="reveal">
+          <span>01 / Recognise</span>
+          <h3>Read both profiles</h3>
+          <p>Identify the mapped target skeleton and the mocap hierarchy without relying on selection or fragile joint names alone.</p>
+        </article>
+        <article class="reveal">
+          <span>02 / Fit</span>
+          <h3>Match different bodies</h3>
+          <p>Fit spine, neck, clavicles, arms and legs through temporary helpers while keeping the target joint lengths unchanged.</p>
+        </article>
+        <article class="reveal">
+          <span>03 / Preview</span>
+          <h3>Review before baking</h3>
+          <p>Drive the target as a live retarget preview, inspect the motion, then use the established animation workflow for the final manual bake.</p>
+        </article>
+      </div>
+
+      <details class="technical-notes reveal">
+        <summary>Technical notes <span>Open details</span></summary>
+        <div class="technical-notes-grid">
+          <div>
+            <h3>Profile-driven mapping</h3>
+            <p>Target roles come from the recognised character profile while mocap roles are stored independently, so different skeleton layouts can share one retarget workflow.</p>
+          </div>
+          <div>
+            <h3>Reversible preview</h3>
+            <p>The retarget system is built from temporary helpers and constraints. The source scene is not saved, and one Maya Undo removes the complete preview.</p>
+          </div>
+        </div>
+      </details>
+    </section>
+
+    <section class="next-project page-shell reveal">
+      <span>End of case study</span>
+      <a href="../index.html">Back to all work <span aria-hidden="true">↗</span></a>
+    </section>
+  </main>
+
+  <footer class="site-footer page-shell">
+    <span>Andrei Tverdiukov</span>
+    <span>Selected work · 2026</span>
+  </footer>
+</body>
+</html>

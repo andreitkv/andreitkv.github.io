@@ -5,6 +5,10 @@ macOS automation.
 
 The current public project index includes:
 
+- **Retarget Tool** — profile-driven mocap fitting and live retarget preview in Maya.
+- **Motion Trail** — a focused viewport path for reading arcs and spacing.
+- **Batch Playblast** — multi-camera Maya review capture with MP4 conversion.
+- **Mirror Tools** — rig-aware pose and cyclic-animation mirroring.
 - **Video Downloader** — an authorised-media download and preparation workflow.
 - **Russian Dubbing** — an AI-assisted Russian localisation pipeline.
 - **Media Utilities** — a collection of focused video and image Quick Actions.

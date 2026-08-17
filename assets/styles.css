@@ -640,6 +640,56 @@ button {
     linear-gradient(145deg, #171b1d, #0e1011);
 }
 
+.retarget-cover {
+  background:
+    radial-gradient(circle at 76% 40%, rgba(207, 255, 70, 0.17), transparent 30%),
+    linear-gradient(145deg, #171b1d, #0e1011);
+}
+
+.retarget-mark {
+  position: absolute;
+  z-index: 2;
+  top: 66px;
+  right: 18px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  transform: rotate(-3deg);
+}
+
+.retarget-mark span {
+  display: grid;
+  width: 48px;
+  height: 58px;
+  place-items: end center;
+  padding-bottom: 7px;
+  border: 1px solid rgba(207, 255, 70, 0.42);
+  border-radius: 22px 22px 10px 10px;
+  color: var(--accent);
+  background:
+    radial-gradient(circle at 50% 22%, var(--accent) 0 5px, transparent 6px),
+    linear-gradient(90deg, transparent 47%, rgba(207, 255, 70, 0.65) 48% 52%, transparent 53%) 50% 17px / 100% 26px no-repeat,
+    rgba(8, 10, 11, 0.8);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 6px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.retarget-mark b {
+  color: var(--accent);
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.retarget-cover .cover-promise span {
+  max-width: 118px;
+}
+
+.retarget-cover .catalog-preview {
+  object-position: left center;
+}
+
 .motion-trail-mark {
   position: absolute;
   z-index: 2;
@@ -1348,6 +1398,10 @@ button {
 
 .catalog-card-motion-trail {
   order: 0;
+}
+
+.catalog-card-retarget {
+  order: -10;
 }
 
 .catalog-card-playblast {
