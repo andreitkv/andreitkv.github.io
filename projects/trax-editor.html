@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Trax Editor — a Maya animation-clip workflow by Andrei Tverdiukov.">
+  <title>Trax Editor — Andrei Tverdiukov</title>
+  <link rel="stylesheet" href="../assets/styles.css?v=20260827-1">
+  <script src="../assets/site.js" defer></script>
+</head>
+<body class="compact-case">
+  <header class="site-header">
+    <a class="brand" href="../index.html" aria-label="Andrei Tverdiukov — Home">
+      <span class="brand-mark">AT</span>
+      <span>Andrei Tverdiukov</span>
+    </a>
+    <nav class="site-nav" aria-label="Project navigation">
+      <a href="#overview">Overview</a>
+      <a href="#workflow">Workflow</a>
+      <a href="../index.html">All work</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="case-hero page-shell" id="overview">
+      <div class="case-kicker reveal">
+        <span>Case study · 09</span>
+        <span>Personal animation tool</span>
+      </div>
+      <h1 class="reveal case-title-medium">Trax<br><span>Editor</span></h1>
+      <div class="case-summary reveal">
+        <p>A focused module inside Tkv Mocap Tools for turning source animation files into reusable Trax clips, arranging them quickly and finishing the result without rebuilding the timeline by hand.</p>
+        <dl class="case-meta">
+          <div><dt>Role</dt><dd>Workflow design &amp; development</dd></div>
+          <div><dt>Built with</dt><dd>Python · Maya Trax · Maya Standalone</dd></div>
+          <div><dt>Tested on</dt><dd>Maya 2025 · macOS</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="hero-video-wrap page-shell reveal">
+      <div class="case-video-item">
+        <video class="hero-video" controls playsinline preload="metadata" poster="../media/tkv-mocap-tools/web/tkv-trax-editor-poster.jpg?v=20260827-1">
+          <source src="../media/tkv-mocap-tools/web/tkv-trax-editor-overview.mp4?v=20260827-1" type="video/mp4">
+        </video>
+        <div class="video-caption">
+          <span>Trax Editor workflow</span>
+          <span>01:19</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="compact-story page-shell" id="workflow">
+      <div class="compact-story-intro reveal">
+        <div>
+          <p class="eyebrow">Problem → solution</p>
+          <h2>From source files<br>to an editable sequence.</h2>
+        </div>
+        <p>Preparing many animation files and rebuilding their timing one clip at a time makes mocap review unnecessarily slow. Trax Editor turns the repeated conversion, import and timeline work into one compact workflow.</p>
+      </div>
+
+      <div class="compact-workflow-grid">
+        <article class="reveal">
+          <span>01 / Prepare</span>
+          <h3>Batch-build clips</h3>
+          <p>Convert folders of FBX or Maya Binary scenes into reusable Maya ASCII Trax clips while preserving the source files and skipping outputs that already exist.</p>
+        </article>
+        <article class="reveal">
+          <span>02 / Arrange</span>
+          <h3>Import as a sequence</h3>
+          <p>Select the needed clips, import them into the active Character Set, place them sequentially and fit the playback range to the resulting sequence.</p>
+        </article>
+        <article class="reveal">
+          <span>03 / Edit</span>
+          <h3>Split, merge and export</h3>
+          <p>Cut clips at the current frame, reorganise the timing, merge the chosen result back into animation and export a new reusable clip.</p>
+        </article>
+      </div>
+
+      <details class="technical-notes reveal">
+        <summary>Technical notes <span>Open details</span></summary>
+        <div class="technical-notes-grid">
+          <div>
+            <h3>Safer batch conversion</h3>
+            <p>FBX conversion starts from a clean Z-Up scene and reads each source frame rate. Maya Binary scenes are baked to their joint hierarchy before clip export.</p>
+          </div>
+          <div>
+            <h3>Non-destructive import</h3>
+            <p>Root-name collisions and clear legacy axis mismatches are handled through temporary clip copies. The original exported clip file is never rewritten.</p>
+          </div>
+        </div>
+      </details>
+    </section>
+
+    <section class="next-project page-shell reveal">
+      <span>End of case study</span>
+      <a href="../index.html">Back to all work <span aria-hidden="true">↗</span></a>
+    </section>
+  </main>
+
+  <footer class="site-footer page-shell">
+    <span>Andrei Tverdiukov</span>
+    <span>Selected work · 2026</span>
+  </footer>
+</body>
+</html>

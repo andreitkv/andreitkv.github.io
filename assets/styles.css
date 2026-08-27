@@ -646,6 +646,52 @@ button {
     linear-gradient(145deg, #171b1d, #0e1011);
 }
 
+.trax-cover {
+  background:
+    radial-gradient(circle at 76% 40%, rgba(207, 255, 70, 0.17), transparent 30%),
+    linear-gradient(145deg, #171b1d, #0e1011);
+}
+
+.trax-clip-stack {
+  position: absolute;
+  z-index: 2;
+  top: 57px;
+  right: 23px;
+  display: grid;
+  width: 132px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 4px;
+  align-items: start;
+  transform: rotate(-4deg);
+}
+
+.trax-clip-stack i {
+  display: grid;
+  height: 34px;
+  place-items: center;
+  border: 1px solid rgba(207, 255, 70, 0.45);
+  border-radius: 4px;
+  color: var(--accent);
+  background: rgba(8, 10, 11, 0.82);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 8px;
+  font-style: normal;
+  letter-spacing: 0.08em;
+  box-shadow: 0 0 14px rgba(207, 255, 70, 0.08);
+}
+
+.trax-clip-stack i:nth-child(2) { margin-top: 19px; }
+.trax-clip-stack i:nth-child(3) { margin-top: 38px; }
+.trax-clip-stack i:nth-child(4) { margin-top: 57px; }
+
+.trax-cover .cover-promise span {
+  max-width: 185px;
+}
+
+.trax-cover .catalog-preview {
+  object-position: 18% center;
+}
+
 .retarget-mark {
   position: absolute;
   z-index: 2;
@@ -1398,6 +1444,10 @@ button {
 
 .catalog-card-motion-trail {
   order: 0;
+}
+
+.catalog-card-trax {
+  order: -20;
 }
 
 .catalog-card-retarget {
