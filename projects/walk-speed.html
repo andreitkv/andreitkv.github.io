@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Walk Speed — a Maya walk-cycle speed and duration workflow by Andrei Tverdiukov.">
+  <title>Walk Speed — Andrei Tverdiukov</title>
+  <link rel="stylesheet" href="../assets/styles.css?v=20260828-1">
+  <script src="../assets/site.js" defer></script>
+</head>
+<body class="compact-case">
+  <header class="site-header">
+    <a class="brand" href="../index.html" aria-label="Andrei Tverdiukov — Home">
+      <span class="brand-mark">AT</span>
+      <span>Andrei Tverdiukov</span>
+    </a>
+    <nav class="site-nav" aria-label="Project navigation">
+      <a href="#overview">Overview</a>
+      <a href="#workflow">Workflow</a>
+      <a href="../index.html">All work</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="case-hero page-shell" id="overview">
+      <div class="case-kicker reveal">
+        <span>Case study · 10</span>
+        <span>Personal animation tool</span>
+      </div>
+      <h1 class="reveal case-title-medium">Walk<br><span>Speed</span></h1>
+      <div class="case-summary reveal">
+        <p>A Maya tool for calculating walk-cycle speed and changing its travel or duration while keeping planted-foot contacts stable.</p>
+        <dl class="case-meta">
+          <div><dt>Role</dt><dd>Workflow design &amp; development</dd></div>
+          <div><dt>Built with</dt><dd>Python · Maya · Animation Layers</dd></div>
+          <div><dt>Tested on</dt><dd>Maya 2025 · macOS</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="hero-video-wrap page-shell reveal">
+      <div class="case-video-item">
+        <video class="hero-video" controls playsinline preload="metadata" poster="../media/tkv-step-tools/web/walk-speed-poster.jpg?v=20260828-1">
+          <source src="../media/tkv-step-tools/web/walk-speed-overview.mp4?v=20260828-1" type="video/mp4">
+        </video>
+        <div class="video-caption">
+          <span>Walk Speed workflow</span>
+          <span>01:22</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="compact-story page-shell" id="workflow">
+      <div class="compact-story-intro reveal">
+        <div>
+          <p class="eyebrow">Problem → solution</p>
+          <h2>Change the timing.<br>Keep the feet planted.</h2>
+        </div>
+        <p>Changing only the root travel or stretching a walk cycle on the timeline can break the relationship between the body and the planted feet. Walk Speed calculates the required motion and rebuilds the cycle as one controlled workflow.</p>
+      </div>
+
+      <div class="compact-workflow-grid">
+        <article class="reveal">
+          <span>01 / Calculate</span>
+          <h3>Frames, distance and speed</h3>
+          <p>Use the calculator directly or auto-detect the current cycle to solve the missing value from its frame count, travelled distance and target speed.</p>
+        </article>
+        <article class="reveal">
+          <span>02 / Change speed</span>
+          <h3>Keep the duration</h3>
+          <p>Speed Only changes how far the walk travels across the existing frame range and builds matching corrections for the body and both feet.</p>
+        </article>
+        <article class="reveal">
+          <span>03 / Retime</span>
+          <h3>Change frames and speed</h3>
+          <p>Frames + Speed can turn a 30-frame cycle into a 40-frame cycle, update the timeline and rebuild the corrected travel without losing foot contacts.</p>
+        </article>
+      </div>
+
+      <details class="technical-notes reveal">
+        <summary>Technical notes <span>Open details</span></summary>
+        <div class="technical-notes-grid">
+          <div>
+            <h3>Foot-contact preservation</h3>
+            <p>The tool analyzes the cycle phases and applies one coordinated travel correction to Main and both feet, keeping the body motion and planted contacts in sync.</p>
+          </div>
+          <div>
+            <h3>Controlled rig support</h3>
+            <p>Validated rig profiles replace unreliable universal guessing. Apply is one Maya Undo step, verifies the resulting distance and never saves the scene.</p>
+          </div>
+        </div>
+      </details>
+    </section>
+
+    <section class="next-project page-shell reveal">
+      <span>End of case study</span>
+      <a href="../index.html">Back to all work <span aria-hidden="true">↗</span></a>
+    </section>
+  </main>
+
+  <footer class="site-footer page-shell">
+    <span>Andrei Tverdiukov</span>
+    <span>Selected work · 2026</span>
+  </footer>
+</body>
+</html>

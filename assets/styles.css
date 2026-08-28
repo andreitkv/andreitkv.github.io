@@ -703,6 +703,61 @@ button {
     linear-gradient(145deg, #171b1d, #0e1011);
 }
 
+.walk-speed-cover {
+  background:
+    radial-gradient(circle at 77% 40%, rgba(207, 255, 70, 0.18), transparent 31%),
+    linear-gradient(145deg, #171b1d, #0e1011);
+}
+
+.walk-speed-cover .cover-promise span {
+  max-width: 120px;
+}
+
+.walk-speed-readout {
+  position: absolute;
+  z-index: 2;
+  top: 65px;
+  right: 18px;
+  display: grid;
+  width: 118px;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 5px;
+  align-items: center;
+  padding: 13px 10px 10px;
+  border: 1px solid rgba(207, 255, 70, 0.42);
+  border-radius: 10px;
+  color: var(--accent);
+  background: rgba(8, 10, 11, 0.82);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  transform: rotate(-3deg);
+  box-shadow: 0 0 18px rgba(207, 255, 70, 0.08);
+}
+
+.walk-speed-readout span {
+  font-size: 14px;
+  text-align: center;
+}
+
+.walk-speed-readout b {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.walk-speed-readout small {
+  grid-column: 1 / -1;
+  padding-top: 7px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: #899194;
+  font-size: 7px;
+  letter-spacing: 0.08em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.walk-speed-cover .catalog-preview {
+  object-position: 20% center;
+}
+
 .trax-clip-stack {
   position: absolute;
   z-index: 2;
@@ -1499,6 +1554,10 @@ button {
 
 .catalog-card-trax {
   order: -20;
+}
+
+.catalog-card-walk-speed {
+  order: -30;
 }
 
 .catalog-card-retarget {
